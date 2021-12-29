@@ -59,15 +59,6 @@ yolo-v5/
 │
 ```
 
-## Los pasos para la reproducibilidad esta en los siguiente cuadernos de Google Colab
-
-### Modelos YOLO
-
-* [Yolo v3](./PFC_YOLOV3.ipynb)  
-* [Yolo v3-tiny](./PFC_YOLOV3-tiny.ipynb)  
-* [Yolo v3-spp](./PFC_YOLOV3_SPP.ipynb)  
-* [Yolo v5x](./PFC_YOLOV5x.ipynb)  
-* [Yolo c5s](./PFC_YOLOV5s.ipynb)  
 
 | Model | Size<br>(Pixels) | Model<br>Size(mb) | Inference<br>time (ms) | Precision<br>(P) | Recall<br>(R) | AP<br>(mask) | AP<br>(no-mask) |  AP<br>(unsure) | mAP<sup>test<br>@0.5 |
 |---               |---  |---    |---     |---      |---      |---      |---      |---      |---
