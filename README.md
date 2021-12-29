@@ -12,16 +12,11 @@ The COVID-19 pandemic has been one of the biggest health crises in recent memory
   <img width="500" height="450" src="https://github.com/eashanadhikarla/wfm/blob/main/sample/main.png">
 </p>
 
-## Dataset (download the annoted images below)
+## Dataset
 Dropbox link: https://www.dropbox.com/sh/peymbuh9yidww61/AAC2YHDkDIp_W_qSnXE_7vQPa?dl=0
 
-### Characteristics of a good dataset
-1) Significant real-world diversity (e.g., of location, time of day, distance to subjects, and number of subjects);
-2) Authentic masked images (as opposed to artificial masks over prior images); and, 
-3) Annotations that are compatible with many existing models. 
-Our dataset generally reflects these goals.
 
-## Training on YOLOv5-TTA
+## Training on YOLOv5-TTA 
 ~~~
 git clone https://github.com/eashanadhikarla/wfm
 cd yolov5
@@ -30,7 +25,7 @@ conda env create --file=environment.yaml
 python train.py --img 640 --batch 16 --epochs 3 --data webcam.yaml --weights yolov5s.pt
 ~~~
 
-## Directory tree
+## Directory tree los conjuntos de datos deben estar divididos como se indica
 ```
 yolo-v5/
 │
@@ -64,7 +59,15 @@ yolo-v5/
 │
 ```
 
-## Experiments
+## Los pasos para la reproducibilidad esta en los siguiente cuadernos de Google Colab
+
+### Modelos YOLO
+
+* [Yolo v3](./PFC_YOLOV3.ipynb)  
+* [Yolo v3-tiny](./PFC_YOLOV3-tiny.ipynb)  
+* [Yolo v3-spp](./PFC_YOLOV3_SPP.ipynb)  
+* [Yolo v5x](./PFC_YOLOV5x.ipynb)  
+* [Yolo c5s](./PFC_YOLOV5s.ipynb)  
 
 | Model | Size<br>(Pixels) | Model<br>Size(mb) | Inference<br>time (ms) | Precision<br>(P) | Recall<br>(R) | AP<br>(mask) | AP<br>(no-mask) |  AP<br>(unsure) | mAP<sup>test<br>@0.5 |
 |---               |---  |---    |---     |---      |---      |---      |---      |---      |---
@@ -78,37 +81,3 @@ yolo-v5/
 | YOLOv5x          |1280 |1055   |35.7    |32.6     |37.7     |41.8     |46.7     |**11.7** |33.8
 | YOLOv5x6<sup>TTA |1280 |1130   |39.2    |**37.0** |**41.6** |**46.5** |**47.4** |11.2     |**35.1**
 
-## Citation
-If you use this repo or find it useful, please consider citing:
-```
-@inproceedings{10.1145/3462203.3475903,
-author = {Adhikarla, Eashan and Davison, Brian D.},
-title = {Face Mask Detection on Real-World Webcam Images},
-year = {2021},
-isbn = {9781450384780},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3462203.3475903},
-doi = {10.1145/3462203.3475903},
-abstract = {The COVID-19 pandemic has been one of the biggest health crises in recent memory.
-According to leading scientists, face masks and maintaining six feet of social distancing
-are the most substantial protections to limit the virus's spread. Experimental data
-on face mask usage in the US is limited and has not been studied in scale. Thus, an
-understanding of population compliance with mask recommendations may be helpful in
-current and future pandemic situations. Knowledge of mask usage will help researchers
-answer many questions about the spread in various regions. One way to understand mask
-usage is by monitoring human behavior through publicly available webcams. Recently,
-researchers have come up with abundant research on face mask detection and recognition
-but their experiments are performed on datasets that do not reflect real-world complexity.
-In this paper, we propose a new webcam-based real-world face-mask detection dataset
-of over 1TB of images collected across different regions of the United States, and
-we implement state-of-the-art object detection algorithms to understand their effectiveness
-in such a real-world application.},
-booktitle = {Proceedings of the Conference on Information Technology for Social Good},
-pages = {139–144},
-numpages = {6},
-keywords = {Webcam Images, Face-Mask Detection, COVID-19, Real-World Dataset},
-location = {Roma, Italy},
-series = {GoodIT '21}
-}
-```
